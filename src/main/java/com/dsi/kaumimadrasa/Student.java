@@ -12,7 +12,7 @@ import org.springframework.lang.NonNull;
 
 @Data
 @NoArgsConstructor
-@Entity
+@Entity(name = "students")
 public class Student {
 
     @Id
