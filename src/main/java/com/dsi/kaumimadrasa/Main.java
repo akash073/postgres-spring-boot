@@ -16,6 +16,9 @@ public class Main {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    private StudentRepository studentRepository;
+
     public static void main(String[] args) {
 	// write your code here
         System.out.println("Hello world");
@@ -23,9 +26,9 @@ public class Main {
     }
 
     @GetMapping("/")
-    public String getAll(){
+    public List<Student> getAll(){
 
-        String sql = "INSERT INTO students (name, email) VALUES ("
+        String sql = "INSERT INTO student (name, email) VALUES ("
                 + "'Nam Ha Minh', 'nam@codejava.net')";
 
         int rows = jdbcTemplate.update(sql);
@@ -33,7 +36,10 @@ public class Main {
             System.out.println("A new row has been inserted.");
         }
 
-        return "hello" ;
+        List<Student> students = studentRepository.findAll();
+        System.out.println(students);
+
+        return students ;
     }
 
 }
