@@ -1,4 +1,4 @@
-package com.dsi.kaumimadrasa;
+package com.dsi.kaumimadrasa.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,5 +1,7 @@
-package com.dsi.kaumimadrasa;
+package com.dsi.kaumimadrasa.controller;
 
+import com.dsi.kaumimadrasa.model.User;
+import com.dsi.kaumimadrasa.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
