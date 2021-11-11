@@ -21,3 +21,5 @@ psql
 create database test_db;
 create user test with encrypted password 'abc';
 grant all privileges on database test_db to test;
+
+
