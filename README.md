@@ -26,6 +26,9 @@ grant all privileges on database test_db to test;
 ## Docker
 
 #stop all docker container
+
 sudo docker stop $(docker ps -a -q)
+
+
 
 
