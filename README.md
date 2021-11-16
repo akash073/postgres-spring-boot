@@ -38,6 +38,7 @@ sudo gedit /etc/postgresql/12/main/pg_hba.conf
 find IPv4 local connections and replace 
 
 host    all             all              0.0.0.0/0                       md5
+
 host    all             all              ::/0                            md5
 
 
