@@ -19,8 +19,26 @@ psql
 \q
 
 create database test_db;
+
 create user test with encrypted password 'abc';
+
 grant all privileges on database test_db to test;
+
+
+# Connect to remote postgres
+
+sudo gedit /etc/postgresql/12/main/postgresql.conf
+
+listen_addresses = '*'
+
+
+
+sudo gedit /etc/postgresql/12/main/pg_hba.conf
+
+find IPv4 local connections and replace 
+
+host    all             all              0.0.0.0/0                       md5
+host    all             all              ::/0                            md5
 
 
 ## Docker
