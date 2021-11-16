@@ -46,7 +46,7 @@ host    all             all              ::/0                            md5
 
 #stop all docker container
 
-sudo docker stop $(docker ps -a -q)
+sudo docker stop $(sudo docker ps -a -q)
 
 
 
