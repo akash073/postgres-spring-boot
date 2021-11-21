@@ -54,16 +54,19 @@ sudo apt update
 
 sudo apt install docker-ce docker-ce-cli containerd.io -y
 
-
 sudo docker container run hello-world
-
-
 
 
 #stop all docker container
 
 sudo docker stop $(sudo docker ps -a -q)
 
+## Nginx
+sudo apt install nginx
+
+sudo ufw allow 'Nginx Full'
+
+suod systemctl start nginx
 
 
 
