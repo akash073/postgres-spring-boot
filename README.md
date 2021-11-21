@@ -2,9 +2,9 @@
 
 sudo apt update && sudo apt upgrade -y
 
-sudo apt install postgresql-client
+sudo apt install postgresql-client -y
 
-sudo apt install postgresql postgresql-contrib
+sudo apt install postgresql postgresql-contrib -y
 
 sudo systemctl status postgresql
 
@@ -27,13 +27,13 @@ grant all privileges on database test_db to test;
 
 # Connect to remote postgres
 
-sudo gedit /etc/postgresql/12/main/postgresql.conf
+sudo nano /etc/postgresql/12/main/postgresql.conf
 
 listen_addresses = '*'
 
 
 
-sudo gedit /etc/postgresql/12/main/pg_hba.conf
+sudo nano /etc/postgresql/12/main/pg_hba.conf
 
 find IPv4 local connections and replace 
 
