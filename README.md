@@ -78,14 +78,8 @@ sudo apt-add-repository ppa:ondrej/php -y
 
 sudo apt update -y
 
-sudo apt install -y php8.0 php8.0-cli php8.0-common
 
-sudo apt install -y php8.0-fpm
-
-sudo apt install php8.0-cli php8.0-common php8.0-imap php8.0-redis php8.0-snmp php8.0-xml php8.0-zip php8.0-mbstring -y
-
-
-sudo apt install php-common php-mysql php-cgi php-mbstring php-curl php-gd php-xml php-xmlrpc php-pear -y
+sudo apt install php-fpm php-cli php-common php-cgi php-mbstring php-curl php-gd php-xml php-xmlrpc php-pear php-zip php-snmp php-imap -y
 
 sudo apt-get install php-pgsql -y
 
@@ -108,6 +102,11 @@ sudo nginx -t
 sudo systemctl restart nginx
 
 sudo service nginx restart -y
+
+sudo nano /var/www/html/phpinfo.php
+
+
+<?php phpinfo(); ?>
 
 
 
