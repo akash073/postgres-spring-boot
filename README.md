@@ -62,11 +62,62 @@ sudo docker container run hello-world
 sudo docker stop $(sudo docker ps -a -q)
 
 ## Nginx
-sudo apt install nginx
+sudo apt install nginx -y
 
 sudo ufw allow 'Nginx Full'
 
-suod systemctl start nginx
+sudo systemctl start nginx
+
+## PHP
+
+sudo apt update -y
+
+sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-https
+
+sudo apt-add-repository ppa:ondrej/php -y
+
+sudo apt update -y
+
+sudo apt install -y php8.0 php8.0-cli php8.0-common
+
+sudo apt install -y php8.0-fpm
+
+sudo apt install php8.0-cli php8.0-common php8.0-imap php8.0-redis php8.0-snmp php8.0-xml php8.0-zip php8.0-mbstring -y
+
+
+sudo apt install php-common php-mysql php-cgi php-mbstring php-curl php-gd php-xml php-xmlrpc php-pear -y
+
+sudo apt-get install php-pgsql -y
+
+sudo nano /etc/nginx/sites-available/default
+
+
+server {
+...
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/var/run/php/php8.0-fpm.sock;
+        }
+...
+}
+
+
+# check configuration is valid
+sudo nginx -t
+
+sudo systemctl restart nginx
+
+sudo service nginx restart -y
+
+
+
+
+
+
+
+
+
+
 
 
 
