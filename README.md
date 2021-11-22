@@ -24,6 +24,11 @@ create user test with encrypted password 'abc';
 
 grant all privileges on database test_db to test;
 
+#DUMP
+pg_dump -h localhost --port=5432 -U test --dbname=test_db > test_db_dumb.sql
+
+#RESTORE
+psql -h localhost --port=5432 -U test --dbname=restored_db -f test_db_dumb.sql --set ON_ERROR_STOP=on
 
 # Connect to remote postgres
 
