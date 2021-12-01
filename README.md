@@ -70,6 +70,8 @@ sudo docker stop $(sudo docker ps -a -q)
 
 sudo docker ps -a
 sudo docker logs -f <container ID>
+       
+
 
 ## Nginx
 sudo apt install nginx -y
