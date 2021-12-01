@@ -66,6 +66,11 @@ sudo docker container run hello-world
 
 sudo docker stop $(sudo docker ps -a -q)
 
+# Logs docker logs
+
+sudo docker ps -a
+sudo docker logs -f <container ID>
+
 ## Nginx
 sudo apt install nginx -y
 
