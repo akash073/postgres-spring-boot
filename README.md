@@ -28,7 +28,24 @@ grant all privileges on database test_db to test;
 pg_dump -h localhost --port=5432 -U test --dbname=test_db > test_db_dumb.sql
 
 #RESTORE
+
 psql -h localhost --port=5432 -U test --dbname=restored_db -f test_db_dumb.sql --set ON_ERROR_STOP=on
+
+pg_dump -h localhost --port=9432 -U username --dbname=alhaiyatululya > alhaiyatululya_dumb.sql
+
+drop database alhaiyatululya_local;
+
+create database alhaiyatululya_local;
+
+create role username;
+
+create role username2;
+
+create role rdsadmin;
+
+\c  alhaiyatululya_local;
+
+psql -h localhost --port=5432 -U test --dbname=alhaiyatululya_local -f alhaiyatululya_dumb.sql 
 
 # Connect to remote postgres
 
