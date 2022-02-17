@@ -1,4 +1,4 @@
-# postgres-spring-boot
+# postgres-spring-boot deploy
 
 sudo apt update && sudo apt upgrade -y
 
@@ -111,7 +111,6 @@ sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-h
 sudo apt-add-repository ppa:ondrej/php -y
 
 sudo apt update -y
-
 
 sudo apt install php-fpm php-cli php-common php-cgi php-mbstring php-curl php-gd php-xml php-xmlrpc php-pear php-zip php-snmp php-imap -y
 
