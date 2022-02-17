@@ -24,6 +24,11 @@ create user test with encrypted password 'abc';
 
 grant all privileges on database test_db to test;
 
+
+#DATABASE SUPER USER CREATION IN POSTGRES
+
+CREATE ROLE username WITH LOGIN SUPERUSER PASSWORD 'password';
+
 #DUMP
 pg_dump -h localhost --port=5432 -U test --dbname=test_db > test_db_dumb.sql
 
