@@ -1,4 +1,4 @@
-# postgres-spring-boot
+# postgres-spring-boot deploy
 
 sudo apt update && sudo apt upgrade -y
 
