@@ -112,7 +112,6 @@ sudo apt-add-repository ppa:ondrej/php -y
 
 sudo apt update -y
 
-
 sudo apt install php-fpm php-cli php-common php-cgi php-mbstring php-curl php-gd php-xml php-xmlrpc php-pear php-zip php-snmp php-imap -y
 
 sudo apt-get install php-pgsql -y
