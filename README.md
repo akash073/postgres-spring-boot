@@ -83,6 +83,8 @@ sudo apt install docker-ce docker-ce-cli containerd.io -y
 
 sudo chmod 666 /var/run/docker.sock
 
+sudo usermod -aG docker ${USER}
+
 sudo service docker restart
 
 docker container run hello-world
